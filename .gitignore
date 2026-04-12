@@ -1,0 +1,54 @@
+# --------------------
+# OS-generated files
+# --------------------
+.DS_Store
+Thumbs.db
+
+# --------------------
+# Editor / IDE
+# --------------------
+.vs/
+.vscode/
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# --------------------
+# Build / output
+# --------------------
+bin/
+obj/
+build/
+out/
+
+# --------------------
+# Logs
+# --------------------
+*.log
+
+# --------------------
+# Python
+# --------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments (never commit)
+.venv/
+venv/
+env/
+
+# Packaging
+dist/
+build/
+*.egg-info/
+requirements.txt
+pyproject.toml
+
+# --------------------
+# Go
+# --------------------
+*.exe
+*.test
+*.out
