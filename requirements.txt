@@ -1,0 +1,4 @@
+dnspython
+tldextract
+python-whois
+colorama

@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+# Color codes
+RED="\033[31m"
+GREEN="\033[32m"
+YELLOW="\033[33m"
+CYAN="\033[36m"
+RESET="\033[0m"
+
+# Pre-commit drift check for Python apps
+echo -e "${CYAN}Running drift check...${RESET}"
+
+DRIFT_VENV="S:/DevTools/venv-drift/Scripts"
+DRIFT_SCRIPT="S:/Dev/drift_check.py"
+
+# Activate venv if present
+if [ -f "$DRIFT_VENV/activate" ]; then
+    # shellcheck disable=SC1090
+    source "$DRIFT_VENV/activate"
+fi
+
+python "$DRIFT_SCRIPT"
+STATUS=$?
+
+if [ $STATUS -ne 0 ]; then
+    echo -e "${RED}Drift detected — commit blocked.${RESET}"
+    exit 1
+fi
+
+echo -e "${GREEN}No drift — commit allowed.${RESET}"
+exit 0

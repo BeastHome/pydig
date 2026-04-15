@@ -41,14 +41,4 @@ env/
 
 # Packaging
 dist/
-build/
 *.egg-info/
-requirements.txt
-pyproject.toml
-
-# --------------------
-# Go
-# --------------------
-*.exe
-*.test
-*.out
