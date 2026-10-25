@@ -33,6 +33,8 @@ __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
+pyproject.toml
+uv.lock
 
 # Virtual environments (never commit)
 .venv/
